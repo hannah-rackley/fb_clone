@@ -11,28 +11,27 @@ html, body {
     background-color: rgb(72 103 173);
     width: 100%;
     align-items: center;
-    padding: 5px;
 }
-/* 
 .icons {
-
-} */
+    margin: 5px;
+    display: flex;
+}
+.spacer {
+    flex-grow: 1;
+}
 .menu_item > p {
     display: none;
 }
 .search_input{
-    flex: 1;
-    width: 100%;
     flex-direction: column;
+    width: 50%;
 }
 
 .search_input--box {
-    flex: 1;
     width: 80%;
 }
 .search_input--icon {
     background-color: white;
-    flex: 1;
 }
 .main {
     display: flex;
@@ -42,7 +41,6 @@ html, body {
 
 .menu {
     display: flex;
-    flex-direction: row;
     background-color: rgb(233, 235, 238);
     overflow-x: auto;
     width: 100%;
@@ -51,26 +49,22 @@ html, body {
     flex-shrink: 0;
 }
 
-/* .menu_item {
-} */
+.menu_item {
+    justify-content: space-around;
+}
 
 .content {
-    height: auto;
     overflow-y: auto;
 }
 
 .posts {
-    width: 100%;
+    max-width: 100%;
     padding: 10px 0;
 }
 
 @media (min-width: 768px) {
     .menu_item > p {
         display: flex;
-    }
-    .search_input--box {
-        flex: 1;
-        width: 60%;
     }
 }
 
@@ -90,14 +84,6 @@ html, body {
         display: flex;
         flex-shrink: 0;
     }
-    .search_input--box {
-        flex: 1;
-        width: 40%;
-    }
-}
-
-@media (min-width: 1200px) {
-
 }
 
 /* https://icons8.com */
