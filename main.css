@@ -19,9 +19,6 @@ html, body {
 .spacer {
     flex-grow: 1;
 }
-.menu_item > p {
-    display: none;
-}
 .search_input{
     flex-direction: column;
     width: 50%;
@@ -32,6 +29,8 @@ html, body {
 }
 .search_input--icon {
     background-color: white;
+    margin: -5px;
+    width: 1.126em;
 }
 .main {
     display: flex;
@@ -44,17 +43,22 @@ html, body {
     background-color: rgb(233, 235, 238);
     overflow-x: auto;
     width: 100%;
-    justify-content: space-around;
     align-items: center;
     flex-shrink: 0;
+    justify-content: space-between;
+    margin-right: 1em;
+}
+.menu_item > p {
+    display: none;
 }
 
-.menu_item {
-    justify-content: space-around;
+.menu_items {
+    align-items: center;
+    justify-content: center;
 }
-
 .content {
     overflow-y: auto;
+    max-width: 700px;
 }
 
 .posts {
@@ -62,9 +66,25 @@ html, body {
     padding: 10px 0;
 }
 
+.adverts {
+    display: none;
+}
+
+@media (min-width: 500px) {
+    .search_input--icon {
+        width: 1.15em;
+    }
+    .menu {
+        justify-content: space-around;
+    }
+}
+
 @media (min-width: 768px) {
     .menu_item > p {
         display: flex;
+    }
+    .search_input--icon {
+        width: 1.15em;
     }
 }
 
@@ -74,15 +94,27 @@ html, body {
     }
     .menu {
         display: flex;
-        width: 10%;
         flex-direction: column;
-        overflow-y: auto;
-        justify-content: center;
+        width: 10%;
+        justify-content: flex-start;
     }
     .content {
         flex-direction: column;
         display: flex;
         flex-shrink: 0;
+    }
+    .adverts {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        min-width: 100px;
+        margin: 1.3em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .adverts {
+        margin: 2em;
     }
 }
 
